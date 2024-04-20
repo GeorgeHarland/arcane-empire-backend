@@ -1,5 +1,6 @@
 import express from 'express';
 import OpenAI from 'openai';
+import serverless from 'serverless-http';
 
 const app = express();
 const port = process.env.PORT || 3030;
@@ -59,13 +60,4 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-// app.listen(port, () => {
-//   console.log(`Server running on port ${port}`);
-// });
-
-app.use((error, req, res, next) => {
-  console.error(error);
-  res.status(500).send('Internal Server Error');
-});
-
-export default app;
+export const handler = serverless(app);
