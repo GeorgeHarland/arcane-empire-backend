@@ -1,11 +1,21 @@
+## Server setup:
+
+- Make sure node and git are installed on your machine
+- Clone the repository using `git clone <git-project-url>`
+- Install the necessary dependencies with `npm install`
+- Add your openAI key to a .env
+- Run the server with `npm run dev`
+- You can now query the server at localhost:3030
+
 ## To deploy:
 
-- add your openAI key to a .env
 - run the lambda_prep.sh
 - upload new code zip to aws lambda
 - either export a function url or point an aws API gateway to the lambda and use that url
 
 ## GPT Assistant config:
+
+(Currently unused)
 
 Current model:
 
