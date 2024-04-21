@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "dev": "cd src && tsc && node --env-file ../.env ../dist/app.js",
+    "dev": "ENV='local' cd src && tsc && node --env-file ../.env ../dist/index.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write **/*.{js,jsx,ts,tsx,json,css,scss,md}",
@@ -16,6 +16,7 @@
   "dependencies": {
     "aws-sdk": "^2.1603.0",
     "aws-serverless-express": "^3.4.0",
+    "cross-env": "^7.0.3",
     "express": "^4.19.2",
     "openai": "^4.38.2",
     "serverless-http": "^3.2.0"

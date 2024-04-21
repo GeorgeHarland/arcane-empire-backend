@@ -60,4 +60,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+if ((process.env.NODE_ENV = 'local')) {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
+
 export const handler = serverless(app);
